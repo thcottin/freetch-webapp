@@ -1,0 +1,16 @@
+<ion-view>
+  <div class="phone-headers">
+    <h3>Add a phone number</h3>
+    <h4>So drivers may contact you when you Sweetch</h4>
+  </div>
+  <div class="list list-inset phone-form">
+    <form ng-submit="savePhone()">
+      <label class="item item-input">
+        <input type="number" ng-model="phone" placeholder="(415) 216-3537" class="form-control" required><br>
+      </label><br/>
+      <label>
+        <input type="submit" value="Save" class="button button-block button-positive activated" />
+      </label>
+    </form>
+  </div>
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-view title="Park" hide-back-button="true">
+
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons ng-if="userState === 'sweetching' || userState === 'requesting'" side="right">
+      <button class="button" ng-click="cancel()">Cancel</button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons ng-if="userMode === 'leaver' && (userState === 'parked' || userState === 'driving')" side="right">
+      <button class="button button button-positive" ng-click="parkMode()">Park</button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons ng-if="(userState === 'driving' || userState === 'parked') && userMode === 'parker'" side="right">
+      <button class="button button button-royal" ng-click="leaveMode()">Leave</button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+
+      <!-- MAP DIRECTIVE -->
+      <map on-create="mapCreated(map)"></map>
+
+    </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+      <div class="row">
+        <div class="col col-20 locate-user">
+          <div class="">
+            <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate"></a>
+          </div>
+        </div>
+        <div class="col col-60 find-spot">
+          <button class="button button-{{ buttonStyle }} button-block find-button" ng-disabled="userState !== 'driving' && userState !== 'parked'" ng-click="requestSweetch()">
+            <em>{{ requestString }}</em>
+          </button>
+        </div>
+        <div class="col col-20">
+        </div>
+      </div>      
+    </ion-footer-bar>
+
+    <ion-footer-bar ng-if="userState === 'sweetching' && userMode === 'parker'" class="bar-stable sweetching">
+      <div class="leaver-desc" nf-if="userMode === 'parker'">
+        <p>Drive to {{ driver.first_name }}, he's standing outside his car</p>
+      </div>
+      <div class="item item-image">
+          <img class="leaver-pic" ng-src="https://graph.facebook.com/v2.0/{{ driver.facebook_id }}/picture?width=140&height=140" />
+      </div>
+    </ion-footer-bar>
+
+    <ion-footer-bar ng-if="userState == 'sweetching' && userMode === 'leaver'" class="bar-stable sweetching">
+      <div class="leaver-desc">
+        <p>Wait for {{ driver.first_name }} outside your car. He's coming in {{ driver.eta }}. After giving the spot, confirm you Sweetched</p>
+        <button class="button button-block button-balanced" ng-click="confirmSweetch()">
+          I have Sweetched
+        </button>
+      </div>
+      <div class="item item-image" id="leaver-pic-box">
+          <img class="leaver-pic" ng-src="https://graph.facebook.com/v2.0/{{ driver.facebook_id }}/picture?width=140&height=140" />
+      </div>
+    </ion-footer-bar>
+
+</ion-view>

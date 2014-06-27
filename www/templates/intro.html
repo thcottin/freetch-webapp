@@ -1,0 +1,53 @@
+<ion-nav-bar animation="slide-left-right-ios7" class="nav-title-slide-ios7 bar-light">
+    <ion-nav-back-button class="button-icon ion-arrow-left-c">
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+
+<ion-view>
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-if="!slideIndex">
+      Skip Intro
+    </button>
+    <button class="button button-positive button-clear no-animation"
+            ng-click="previous()" ng-if="slideIndex > 0">
+      Previous Slide
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right"> 
+    <button class="button button-positive button-clear no-animation"
+            ng-click="next()" ng-if="slideIndex != 2">
+      Next
+    </button>
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-if="slideIndex == 2">
+      Login
+    </button>
+  </ion-nav-buttons>
+
+  <ion-slide-box class="slide-box" on-slide-changed="slideChanged(index)">
+
+    <ion-slide>
+      <h4 class="slide-text">Find on-street parking in one tap</h4>
+      <div>
+        <img src="img/screen1@2x.png", class="slide-image">
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <h4>Reward $5 the Sweetch body who give you his spot.</h4>
+      
+      <div>
+        <img src="img/screen2@2x.png", class="slide-image">
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <h4>5 min before leaving, list your spot and get $4 back.</h4>
+      <div>
+        <img src="img/screen3@2x.png", class="slide-image">
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+</ion-view> 

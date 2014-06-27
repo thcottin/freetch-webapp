@@ -1,0 +1,23 @@
+<form ua-login>
+
+  <ion-view title="Log In">
+
+    <ion-content>
+
+      <div class="padding" style="text-align: center; padding-top: 100px;">
+        <div id="logo">
+          <img src="img/sweetchLogo.png", class="sweetch-image">
+        </div>
+
+        <button ng-click="facebookLogin()" class="button button-block button-positive icon-left ion-social-facebook" id="login-fb" ua-oauth-link="facebook" style="background: #4c66a4;">
+          <span ng-show="!loading">Log in with Facebook</span>
+          <i ng-show="loading" class="ion-loading-b"></i>
+        </button>
+
+      </div>
+
+    </ion-content>
+
+  </ion-view>
+
+</form>

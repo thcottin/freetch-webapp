@@ -1,0 +1,168 @@
+/* Empty. Add your own CSS if you like */
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+/* Slider */
+.slider {
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.slide-image {
+  max-width:100%;
+  max-height:70%;
+}
+
+.slide-box {
+  margin: 0px;
+  padding: 0px;
+}
+
+.slide-text {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+/* Phone screen */
+.phone-form {
+  width: 70%;
+  margin: auto;
+}
+
+.phone-headers {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.phone-headers h3 {
+  color: #545d60;
+  padding: 15px;
+}
+
+.phone-headers h4 {
+  color: #545d60;
+  padding-bottom: 5px;
+  font-style: italic;
+}
+
+/* map */
+
+map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.lolipop {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 70px;
+  width: 70px;
+  margin-top: -70px;
+  margin-left: -29px;
+}
+
+
+/* Footer */
+
+.bar-footer{
+  height:80px;
+}
+
+.bar-footer.sweetching {
+  height: 140px;
+}
+
+.leaver-desc {
+  font-size: 1.2em;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 70%;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#leaver-pic-box {
+  width: 140px;
+  float: right;
+}
+
+.leaver-pic {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+}
+
+em {
+  font-size: 1.3em;
+}
+
+.locate-user {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.find-spot {
+  font-size: 1.4em;
+}
+
+.find-button {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.scroll {
+  height: 100%;
+}
+
+
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  width: 70%;
+}
+
+#login-fb {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sweetch-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
